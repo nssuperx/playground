@@ -11,10 +11,10 @@
         <?php
 
         $folders = array_filter(glob('./*',GLOB_ONLYDIR));
-	//var_dump($images);
-	foreach($folders as $folder){
-		print "<a href=\"$folder/index.php\">$folder<br>\n";
-	}
+        //var_dump($images);
+        foreach($folders as $folder){
+            print "<a href=\"$folder/index.php\">$folder<br>\n";
+        }
 
         ?>
     </p>
