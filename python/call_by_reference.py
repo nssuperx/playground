@@ -1,8 +1,10 @@
-hoge1num = 0
-hoge2num = 0
+num1 = 0
+num2 = 0
 while True:
-    hoge1num += 1
-    hoge2num += 1
-    if id(hoge1num) != id(hoge2num):
-        print(hoge1num)
+    num1 += 1
+    num2 += 1
+    if id(num1) != id(num2):
         break
+
+print("num1: " + str(num1))
+print("num2: " + str(num2))
