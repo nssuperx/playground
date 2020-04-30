@@ -2,11 +2,11 @@ FROM ubuntu
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update \
-    && apt-get -y install sudo vim git
+# RUN apt-get update \
+#     && apt-get -y install sudo vim git
 
 RUN apt-get update \
-    && apt-get -y install xserver-xorg
+    && apt-get -y install xserver-xorg libxcomposite-dev libnss3 libgtk-3-0 libasound2 openssh-server
     # && apt-get -y install xserver-xorg libgtkextra-dev libgconf2-dev libnss3 libasound2 libxtst-dev libxss1 libgtk-3-0
 
 # RUN apt-get update \
@@ -52,5 +52,5 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
 # USER ${DOCKER_USER}
 
 # WORKDIR /home/${DOCKER_USER}/app
-WORKDIR /home/root/app
+WORKDIR /home/app
 

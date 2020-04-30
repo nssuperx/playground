@@ -1,0 +1,12 @@
+version: '3'
+services:
+  electron:
+    container_name: electron-test
+    build: ./
+    environment:
+      - DISPLAY=$LOCALIP:0
+    network_mode: "host"
+    volumes:
+      - ./electron-quick-start:/home/app
+      - $HOME/.Xauthority:/root/.Xauthority
+    tty: true
