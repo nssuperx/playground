@@ -8,5 +8,4 @@ services:
     network_mode: "host"
     volumes:
       - ./electron-quick-start:/home/app
-      # - $HOME/.Xauthority:/root/.Xauthority
     tty: true
