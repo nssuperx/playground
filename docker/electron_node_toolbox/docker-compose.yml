@@ -4,11 +4,10 @@ services:
     container_name: electron-test
     build: ./
     environment:
-      # - DISPLAY=host.docker.internal:0
-      - DISPLAY=$DISPLAY:0
+      - DISPLAY=$DISPLAY
     network_mode: "host"
     volumes:
       - ./electron-quick-start:/home/app
-      # - /tmp/.X11-unix:/tmp/.X11-unix
-      # - $HOME/.Xauthority:/root/.Xauthority
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $HOME/.Xauthority:/root/.Xauthority
     tty: true
