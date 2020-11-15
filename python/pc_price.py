@@ -1,9 +1,9 @@
 parts = {}
 
 # Intel
-parts['cpu'] = ('Core i7 10700', 38500)
+# parts['cpu'] = ('Core i7 10700', 38500)
 # parts['cpu'] = ('Core i7 10700F', 37268)
-# parts['cpu'] = ('Core i5 10400', 20480)
+parts['cpu'] = ('Core i5 10400', 20480)
 # parts['cpu'] = ('Core i5 10400F', 18675)
 # i7 8core 16thread LGA1200
 # i5 6core 12thread LGA1200
@@ -39,7 +39,8 @@ parts['motherboard'] = ('ATX Intel H470 LGA1200', 12882)
 parts['main_memory'] = ('DDR4 PC4-21300 16GB x2', 10980)
 
 # parts['gpu'] = ('RTX2060 SUPER VRAM 8GB', 39800) # dvi x1, hdmi x1, dp x1
-parts['gpu'] = ('RTX2060 SUPER VRAM 8GB', 42878) # hdmi x1, dp x3
+# parts['gpu'] = ('RTX2060 SUPER VRAM 8GB', 42878) # hdmi x1, dp x3
+parts['gpu'] = ('RTX2070 SUPER VRAM 8GB', 48950) # hdmi x1, dp x3
 # もう3000円くらいかければDisplayPort端子数が増える。
 
 parts['power'] = ('750W', 7238)
