@@ -1,12 +1,37 @@
 parts = {}
+
+# Intel
+parts['cpu'] = ('Core i7 10700', 38500)
+# parts['cpu'] = ('Core i7 10700F', 37268)
+# parts['cpu'] = ('Core i5 10400', 20480)
+# parts['cpu'] = ('Core i5 10400F', 18675)
+# i7 8core 16thread LGA1200
+# i5 6core 12thread LGA1200
+# 内蔵gpu付きです。
+# なぜそうしたかは、2000円くらいしか変わらんから、普通に性能がいいから。です。
+# でも、基本はbiosでとめます。いざというときに使います。
+# 型番に「F」がついてるのは内蔵gpuなしです。
+# 正直、ターボブーストでクロックはめちゃ上がるからi5でもいい気がする。
+# でもいろんなスコアは低い。たぶん普通に使う分ではそんな影響ないかと。
+
+
+# AMD
 # parts['cpu'] = ('AMD Ryzen 7 3700X', 39280)
-parts['cpu'] = ('AMD Ryzen 5 5600X', 39380)
-# 最新のやつは今は高い。これは8core16thread。
+# parts['cpu'] = ('AMD Ryzen 5 5600X', 39380)
+# Ryzen 7 3700X 8core 16thread SocketAM4
+# Ryzen 5 5600X 6core 12thread SocketAM4
 # 下のが最新。6core12thread。ryzen7の最新のは高すぎる。
 # コスパだけで考えると、正直intelのでもよかった気がする。そんなに変わらん。
 
-# parts['motherboard'] = ('ATX AMD B450', 7980)
-parts['motherboard'] = ('ATX AMD B550', 11861)
+
+# Intel
+parts['motherboard'] = ('ATX Intel H470 LGA1200', 12882)
+# どちらのcpuでもこれ
+# M.2付き
+
+# AMD
+# parts['motherboard'] = ('ATX AMD B450 SocketAM4', 7980)
+# parts['motherboard'] = ('ATX AMD B550 SocketAM4', 11861)
 # SocketAM4 B450 最安
 # Ryzen 5 5600Xにするならおそらくbiosアップデートがいる。
 # Ryzen 5 5600X : SocketAM4 B550
