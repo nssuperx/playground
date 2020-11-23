@@ -59,9 +59,7 @@ parts['hdd'] = ('5TB 7200rpm', 8800) # 東芝製
 
 parts['sata_cable'] = ('sataケーブル3本セット', 1000)
 
-# parts['os'] = ('Windows10 Home', 17527)
-parts['os'] = ('Windows10 Home', 12345) # 古い、usbインストーラーついてくる
-# 古いのを買ったら安くなる。欲しいのはライセンスキーなので関係なし。
+parts['os'] = ('Windows10 Home', 17527) # 通常版
 
 sum = 0
 
