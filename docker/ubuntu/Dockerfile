@@ -8,3 +8,4 @@ RUN echo "ns:nspass" | chpasswd
 RUN adduser ns sudo
 USER ns
 WORKDIR /home/ns
+CMD /bin/bash
