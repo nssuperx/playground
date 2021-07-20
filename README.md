@@ -1,4 +1,4 @@
-# smallscripts
+# playground
 ちょこっとしたスクリプトをおく
 ## つくったもの
 * vfr2cfr  
