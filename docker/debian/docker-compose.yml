@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    container_name: ubuntu
+    container_name: debian
     build: .
     tty: true
     volumes:
