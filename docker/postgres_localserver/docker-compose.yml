@@ -1,0 +1,16 @@
+version: '3'
+services:
+    db:
+        container_name: postgres
+        build: ./postgres
+        ports: 
+            - '5432:5432'
+        environment:
+            - TZ
+            - POSTGRES_USER
+            - POSTGRES_PASSWORD
+            - POSTGRES_DB
+        tty: true
+        volumes:
+            - ./workspace:/root/work
+        
