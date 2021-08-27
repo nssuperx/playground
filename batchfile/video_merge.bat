@@ -14,5 +14,3 @@ ffmpeg -safe 0 -f concat -i tmp.txt -vcodec copy -acodec copy %outFilePath%
 rem ffmpeg -safe 0 -f concat -i tmp.txt -vcodec copy -acodec copy out.mp4
 
 del tmp.txt
-
-pause
