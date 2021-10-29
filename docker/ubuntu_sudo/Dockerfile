@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM ubuntu:21.10
 
 RUN apt update && apt upgrade -y
 RUN apt install sudo vim -y
