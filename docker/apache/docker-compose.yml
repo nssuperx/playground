@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: apache
+    build: .
+    tty: true
+    volumes:
+      - ./public-html:/root/work
+    ports: 
+    - '80:80'
+    - '443:443'
