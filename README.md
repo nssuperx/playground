@@ -1,5 +1,6 @@
 # playground
-ちょこっとしたスクリプトをおく
+適当に書きたい、実験したりするときに使う場所。ルールは特にない。メモとかも残すかもしれない。
+
 ## つくったもの
-* vfr2cfr  
-ドラッグアンドドロップでvfrな動画をcfrな可逆圧縮avi(Ut Video Codec)に変換
+* [vfr2cfr](./batchfile/vfr2cfr.bat)  
+ドラッグアンドドロップでvfrな動画をcfrな可逆圧縮aviに変換
