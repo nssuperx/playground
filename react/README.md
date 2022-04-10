@@ -40,9 +40,18 @@ node.jsのパッケージ管理ツール
 実行をほかのコンポーネントに委譲したいときは、変数にラムダ式のほうが見やすい？
 
 # コンポーネント
+`<App />`とかのこと。関数名をhtmlのようにタグで囲むとコンポーネントとして扱える。
+コンポーネントはどこかで定義する。関数のようなもの。
+
+* [components and props](https://ja.reactjs.org/docs/components-and-props.html)
+* [関数コンポーネントとクラスコンポーネント](https://ja.reactjs.org/docs/components-and-props.html#function-and-class-components)
+
+# Props
+コンポーネントに渡す引数のようなもの。**読み取り専用**。
+* [Props は読み取り専用](https://ja.reactjs.org/docs/components-and-props.html#props-are-read-only)
 
 # React Hooks
-* [公式ドキュメント（日本語）](https://ja.reactjs.org/docs/hooks-intro.html)
+* [React Hooks](https://ja.reactjs.org/docs/hooks-intro.html)
     * [動機](https://ja.reactjs.org/docs/hooks-intro.html#motivation)
 
 ## useState
@@ -70,3 +79,6 @@ Stateを扱う
 # カスタムフック
 機能の分離。Hook(`useなんとか`)を自作できる。
 外部ファイルに関数作るイメージ。
+
+# コンテクスト
+* [コンテクスト](https://ja.reactjs.org/docs/context.html)
