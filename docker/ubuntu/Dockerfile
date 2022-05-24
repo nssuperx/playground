@@ -1,4 +1,4 @@
-FROM ubuntu:21.10
+FROM ubuntu:22.04
 
 RUN apt update && apt upgrade -y
 RUN apt install vim curl wget bash-completion -y
