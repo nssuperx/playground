@@ -1,0 +1,1 @@
+npx license-checker --summary --production --excludePrivatePackages --direct --json --customPath ./format.json > Licenses.json
