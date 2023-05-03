@@ -1,3 +1,5 @@
 env
 sound
 pretrained_models
+
+openai-apikey.txt
