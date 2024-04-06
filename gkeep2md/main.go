@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"fmt"
 	"html/template"
 	"io"
 	"os"
@@ -53,7 +52,6 @@ func main() {
 	fileName := filepath.Base(*filePath)
 	saveDir := filepath.Dir(*filePath)
 	saveFilename := fileName[:len(fileName)-len(filepath.Ext(fileName))] + ".md"
-	fmt.Println(saveFilename)
 
 	dirName := filepath.Join(saveDir, strings.Join(gKeepLabels, "_"))
 	if err := os.MkdirAll(dirName, 0755); err != nil {
@@ -65,7 +63,7 @@ func main() {
 		panic(err)
 	}
 	defer saveFile.Close()
-	
+
 	tmpl, err := template.New("md").Parse("# {{.Title}}\n\n{{.TextContent}}\n")
 	if err != nil {
 		panic(err)
