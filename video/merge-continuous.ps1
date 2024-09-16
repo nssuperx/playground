@@ -1,4 +1,4 @@
-$srcDir = "."
+$srcDir = $Args[0]
 $timeDiffSeconds = 30
 
 Push-Location $srcDir
