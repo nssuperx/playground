@@ -8,6 +8,7 @@ $files = Get-ChildItem .\* -Include *.mp4 | Sort-Object -Property Name
 $format = "yyyyMMddHHmmss"
 $isContinuous = $false
 $firstFileName = ""
+$mergedDir = ""
 
 for ($i = 0; $i -lt $files.Count; $i++) {
     $file = $files[$i].Name
@@ -24,15 +25,17 @@ for ($i = 0; $i -lt $files.Count; $i++) {
     if ($timeDiff.TotalSeconds -le $timeDiffSeconds) {
         if (!$isContinuous) {
             $firstFileName = [System.IO.Path]::GetFileNameWithoutExtension($file)
+            $mergedDir = ".\merged\$firstFileName"
+            New-Item $mergedDir -ItemType Directory
             New-Item -Path "tmp.txt" -ItemType File -Force
         }
         $isContinuous = $true
-        Move-Item "$file" ".\merged\$file"
-        Add-Content -Path "tmp.txt" -Value "file '.\merged\$file'"
+        Move-Item "$file" "$mergedDir\$file"
+        Add-Content -Path "tmp.txt" -Value "file '$mergedDir\$file'"
     }
     elseif ($isContinuous) {
-        Move-Item "$file" ".\merged\$file"
-        Add-Content -Path "tmp.txt" -Value "file '.\merged\$file'"
+        Move-Item "$file" "$mergedDir\$file"
+        Add-Content -Path "tmp.txt" -Value "file '$mergedDir\$file'"
         $isContinuous = $false
         ffmpeg -safe 0 -f concat -i tmp.txt -vcodec copy -acodec copy "$firstFileName-out.mp4"
         Remove-Item "tmp.txt"
