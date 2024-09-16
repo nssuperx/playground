@@ -12,7 +12,7 @@ $mergedDir = ""
 
 for ($i = 0; $i -lt $files.Count; $i++) {
     $file = $files[$i].Name
-    $timediff = $timeDiffSeconds + 1
+    $timediff = New-TimeSpan -Seconds ($timeDiffSeconds + 1)
     if ($i + 1 -lt $files.Count) {
         $nextFile = $files[$i + 1].Name
         # ファイル名から日時部分を抽出
